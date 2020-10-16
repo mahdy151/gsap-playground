@@ -14,7 +14,7 @@ window.onload = function () {
         .to(secBg, 0.2, {
             scaleX: 1
         })
-        .to(word, 0.1, {
+        .to(word, .1, {
             opacity: 1
         }, "-=0.1")
         .to(firstBg, 0.2, {
