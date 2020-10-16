@@ -1,0 +1,82 @@
+body,
+html {
+  margin: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.animation {
+  background-image: url(https://staging.newenglish.co.uk/wp-content/uploads/2019/08/NE-Website_Strelley_Interior_02_2500x1553.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  -webkit-backface-visibility: hidden;
+  /* add to fix webkit bug jitter */
+  -webkit-transform: perspective(1000px);
+  /* add to fix webkit bug jitter */
+}
+.animation:before {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.33);
+  animation: fadeIn 2s;
+}
+.animation .text {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 6rem;
+  -webkit-perspective: 1000px;
+  /* needed to prevent bluriness in chrome with will change */
+  -webkit-transform-style: preserve-3d;
+  /* optional but best to include to prevent bluriness in chrome with will change */
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  will-change: transform;
+  text-shadow: -0.02em 0 0 #f22613, 0.02em 0 0 #00ffff;
+}
+.animation .text span {
+  display: inline-block;
+}
+
+.glitch1 {
+  height: 25px;
+  width: 600px;
+  position: absolute;
+  background-color: #10e84a;
+  top: 0;
+}
+
+.glitch2 {
+  height: 15px;
+  width: 400px;
+  position: absolute;
+  background-color: #e8da10;
+  bottom: 0;
+}
+
+.glitch3 {
+  height: 100px;
+  width: 120px;
+  position: absolute;
+  border: 6px solid #fff;
+  bottom: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
